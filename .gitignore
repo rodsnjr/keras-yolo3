@@ -2,3 +2,7 @@
 *.jpeg
 *.weights
 *.h5
+logs/
+
+*.pyc
+*.pkl
