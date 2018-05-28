@@ -34,8 +34,10 @@ def create_training_instances(
         train_ints, train_labels = parse_voc_annotation(train_annot_folder, train_image_folder, train_cache, labels)
     
     # parse annotations of the validation set, if any, otherwise split the training set
-    if os.path.exists(valid_annot_folder):
+    if os.path.exists(valid_annot_folder) and annotation != 'gvc':
         valid_ints, valid_labels = parse_voc_annotation(valid_annot_folder, valid_image_folder, valid_cache, labels)
+    elif os.path.exists(valid_annot_folder) and annotation == 'gvc':
+        valid_ints, valid_labels = parse_csv_annotations(valid_annot_folder, valid_image_folder, valid_cache, labels)        
     else:
         print("valid_annot_folder not exists. Spliting the trainining set.")
 

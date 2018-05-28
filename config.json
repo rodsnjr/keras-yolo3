@@ -7,13 +7,13 @@
     },
 
     "train": {
-        "train_image_folder":   "/media/rodsnjr/Files/Datasets/indoor_datasets/Images/",
-        "train_annot_folder":   "/media/rodsnjr/Files/Datasets/indoor_datasets/train_annotations.csv",
+        "train_image_folder":   "E:\\rodney/Dataset Detecção\\Images\\",
+        "train_annot_folder":   "E:\\rodney\\Dataset Detecção\\train_annotations.csv",
         "annotation": "gvc",
         "cache_name":           "kangaroo_train.pkl",
 
         "train_times":          1,
-        "batch_size":           2,
+        "batch_size":           16,
         "learning_rate":        1e-4,
         "nb_epochs":            100,
         "warmup_epochs":        1,
@@ -32,8 +32,8 @@
     },
 
     "valid": {
-        "valid_image_folder":   "",
-        "valid_annot_folder":   "",
+        "valid_image_folder":   "E:\\rodney\\Dataset Detecção\\Images\\",
+        "valid_annot_folder":   "E:\\rodney\\Dataset Detecção\\validation_annotations.csv",
         "cache_name":           "",
 
         "valid_times":          1
